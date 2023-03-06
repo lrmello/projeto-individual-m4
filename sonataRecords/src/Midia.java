@@ -1,2 +1,4 @@
-package sonataRecords.src;public class Midia {
+package sonataRecords.src;
+public class Midia {
+
 }
