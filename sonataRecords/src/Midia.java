@@ -63,6 +63,7 @@ public class Midia {
     public boolean isFilme() {
         return artista instanceof Ator;
     }
+
 }
 
 
