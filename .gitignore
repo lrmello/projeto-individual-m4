@@ -1,2 +1,13 @@
 
 *.xml
+*.iml
+sonataRecords/out/production/sonataRecords/sonataRecords/sonataRecords.iml
+sonataRecords/out/production/sonataRecords/sonataRecords/src/Ator.class
+sonataRecords/out/production/sonataRecords/sonataRecords/src/Biblioteca.class
+sonataRecords/out/production/sonataRecords/sonataRecords/src/Filme.class
+sonataRecords/out/production/sonataRecords/sonataRecords/src/Main.class
+sonataRecords/out/production/sonataRecords/sonataRecords/src/Musica.class
+sonataRecords/out/production/sonataRecords/sonataRecords/src/Midia.class
+sonataRecords/out/production/sonataRecords/sonataRecords/src/Musico.class
+sonataRecords/out/production/sonataRecords/sonataRecords/src/Playlist.class
+sonataRecords/out/production/sonataRecords/sonataRecords/src/Usuario.class
