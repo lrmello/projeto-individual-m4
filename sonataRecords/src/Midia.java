@@ -8,6 +8,9 @@ public class Midia {
     private Artista artista;
     private int nota;
 
+    public Midia(String titulo, int ano, String genero, Artista artista, int nota) {
+    }
+
     public void midia(String titulo, int ano, String genero,Artista artista,int nota){
         this.titulo = titulo;
         this.ano = ano;
@@ -20,7 +23,7 @@ public class Midia {
         return titulo;
     }
 
-    public void setTitulo(){
+    public void setTitulo(String midiaTeste){
         this.titulo = titulo;
     }
 
@@ -54,7 +57,12 @@ public class Midia {
     }
 
     public void setNota(int nota){
-        this.nota = nota;
+        if (nota >= 1 && nota <= 5){
+            this.nota = nota;
+        }else{
+            System.out.println("A nota precisa estar no intervalo de 1 a 5");
+        }
+
     }
     public boolean isMusica() {
         return artista instanceof Musico;
@@ -65,5 +73,3 @@ public class Midia {
     }
 
 }
-
-

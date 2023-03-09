@@ -4,14 +4,15 @@ public class Musico extends Artista{
     private String instrumento;
     private String estiloMusical;
 
-    public Musico(){
 
-    }
 
     public Musico(String nome,int dataNascimento, String premiacoes, String genero,String instrumento, String estiloMusical){
         super(nome,dataNascimento,premiacoes,genero);
         this.instrumento = instrumento;
         this.estiloMusical = estiloMusical;
+    }
+
+    public Musico(String nomeArtista) {
     }
 
     public String getInstrumento(){

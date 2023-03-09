@@ -30,7 +30,7 @@ public class Artista {
         return dataNascimento;
     }
 
-    public void  setDataNascimento(int dataNascimento){
+    public void setDataNascimento(int dataNascimento){
         this.dataNascimento = dataNascimento;
     }
 
