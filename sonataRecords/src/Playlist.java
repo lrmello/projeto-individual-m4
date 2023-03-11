@@ -1,50 +1,49 @@
 package sonataRecords.src;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Playlist {
+/*A classe playlist irá ser reponsável por toda a playlist das músicas*/
+class Playlist {
     private String nome;
-    private List<Midia> midias;
-    private List<Midia> ordem;
+    private Midia midia;
+    private String[] ordem = new String[10];
 
-    public Playlist(String nome){
+    public Playlist(String nome) {
         this.nome = nome;
-        this.midias = new ArrayList<>();
-        this.ordem = new ArrayList<>();
-    }
-
-    public String getNome(){
-        return nome;
-    }
-
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-
-    public List<Midia> getMidias(){
-        return midias;
-    }
-
-    public void setMidias(List<Midia> midias){
-        this.midias = midias;
-    }
-
-    public List<Midia> getOrdem(){
-        return ordem;
-    }
-
-    public void setOrdem(List<Midia> ordem){
+        this.midia = midia;
         this.ordem = ordem;
     }
 
-    public void adicionarMidia(Midia midia){
-        midias.add(midia);
-        ordem.add(midia);
+    public String getNome() {
+        return nome;
     }
 
-    public void removerMidia(Midia midia){
-        midias.remove(midia);
-        ordem.remove(midia);
+    public void setNome(String nome) {
+        this.nome = nome;
     }
+
+    public Midia getMidias() {
+        return midia;
+    }
+
+    public void setMidias(String[] midias) {
+        this.midia = midia;
+    }
+
+    public String[] getOrdem() {
+        return ordem;
+    }
+
+    public void setOrdem(String[] ordem) {
+        this.ordem = ordem;
+    }
+
+   /*Próxima midia como metódo*/
+    public void proxima_midia(){
+
+    }
+
+    /*Midia anterior como método*/
+    public void midia_anterior(){
+        /*ordem[1];*/
+    }
+
 }

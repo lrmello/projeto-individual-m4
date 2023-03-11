@@ -1,26 +1,13 @@
 package sonataRecords.src;
 
-public class Musico extends Artista{
-    private String instrumento;
+/*A classe músico puxa todas as propriedades de artista como herança*/
+class Musico extends Artista{
+
     private String estiloMusical;
 
-
-
     public Musico(String nome,int dataNascimento, String premiacoes, String genero,String instrumento, String estiloMusical){
-        super(nome,dataNascimento,premiacoes,genero);
-        this.instrumento = instrumento;
+        super(nome);
         this.estiloMusical = estiloMusical;
-    }
-
-    public Musico(String nomeArtista) {
-    }
-
-    public String getInstrumento(){
-        return instrumento;
-    }
-
-    public void setInstrumento(String instrumento){
-        this.instrumento = instrumento;
     }
 
     public String getEstiloMusical(){
@@ -28,7 +15,8 @@ public class Musico extends Artista{
     }
 
     public void setEstiloMusical(){
-        if(estiloMusical.equals("instrumental")||estiloMusical.equals("vocal")||estiloMusical.equals("instrumental e vocal")){
+        /*Aqui ele filtrar se o músico atua com instrumento ou vocal ou os dois */
+        if(estiloMusical.equalsIgnoreCase("instrumental")||estiloMusical.equalsIgnoreCase("vocal")||estiloMusical.equalsIgnoreCase("instrumental e vocal")){
             this.estiloMusical = estiloMusical;
         }else{
             throw new IllegalArgumentException("Tipo de música inválido");

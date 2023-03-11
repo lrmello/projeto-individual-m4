@@ -1,16 +1,12 @@
 package sonataRecords.src;
 
-public class Ator extends Artista {
-    String formacao;
+class Ator extends Artista {
+    private String formacao;
 
     //Construtor do ator
-
-    public Ator(String nome,int dataNascimento,String premiacoes,String genero,String formacao){
-        super(nome,dataNascimento,premiacoes,genero);
+    public Ator(String nome,String formacao){
+        super(nome);
         this.formacao = formacao;
-    }
-
-    public Ator(String nomeArtista) {
     }
 
     public String getFormacao(){
@@ -18,7 +14,12 @@ public class Ator extends Artista {
     }
 
     public void setFormacao(String formacao){
-        this.formacao = formacao;
+        /*Aqui ele filtrar se o ator ele atua no teatro ou no cinema ou em outros */
+        if (formacao.equalsIgnoreCase("teatro")||formacao.equalsIgnoreCase("cinema")||formacao.equalsIgnoreCase("outros")){
+            this.formacao = formacao;
+        }else{
+            System.out.println("Tipo inválido");
+        }
     }
 
 }
