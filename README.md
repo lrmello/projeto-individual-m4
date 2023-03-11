@@ -35,11 +35,43 @@ Exemplo de inserção de um novo Artista a partir de uma instância:
  */
 Ator artista1 = new Ator("Leonardo", "Cinema");
 Ator ator1 = new Ator("Jubileu","Cinema");
-
 ````
+
+Foi usado encapsulamento com getters e setters:
+
+````java
+public String getDataNascimento(){
+        return dataNascimento;
+    }
+
+
+ public void setDataNascimento(String dataNascimento){
+        this.dataNascimento = dataNascimento;
+    }
+````
+
+Foi aplicado composição de uma classe instanciando de uma outra classe sendo uma classe privada:
+
+````java
+private Artista artistaComposto;
+````
+
+Houve herança de uma classe, tendo uma classe pai e filha:
+
+```java
+class Musica extends Midia
+
+```
 
 Linguagem feita:
 
-<center>![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)</center>
+<center><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="100" height="100"/></center>
 
 
+Criador do código:
+
+Leonardo Reis
+
+><a href="https://www.linkedin.com/in/leonardo-reis-95228893/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
+</div>
+  

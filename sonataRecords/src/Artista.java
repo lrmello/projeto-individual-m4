@@ -35,7 +35,7 @@ class Artista {
     }
 
 
-    public void setDataNascimento(String  dataNascimento){
+    public void setDataNascimento(String dataNascimento){
         this.dataNascimento = dataNascimento;
     }
 
