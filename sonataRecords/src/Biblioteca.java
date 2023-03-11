@@ -3,7 +3,7 @@ package sonataRecords.src;
 class Biblioteca {
     private Midia midia;
     private String[] usuarios;
-    private String[] playlists;
+    private Playlist[] playlists;
 
     public Biblioteca(){
         this.midia = midia;
@@ -26,15 +26,31 @@ class Biblioteca {
         this.usuarios = usuarios;
     }
 
-    public String[] getPlaylists() {
+    public Playlist[] getPlaylists() {
         return playlists;
     }
 
-    public void setPlaylists(String[] playlists) {
+    public void setPlaylists(Playlist[] playlists) {
         this.playlists = playlists;
     }
 
-    public void tocar_playlist(){
 
+    /*Aqui ela irá tocar as playlists no estado atual */
+    public void tocar_playlist(String nome_playlist){
+        for (Playlist playlist : playlists){
+            if (playlist.getNome().equals(nome_playlist)){
+                String[] ordem = playlist.getOrdem();
+                for (String midiaNome : ordem){
+                    Midia midia = playlist.get_midia_atual();
+                }
+
+                return;
+            }
+        }
+        System.out.println("Playlist não encontrada");
     }
+
+
 }
+
+

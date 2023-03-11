@@ -22,4 +22,30 @@ class Ator extends Artista {
         }
     }
 
+    @Override
+    public String getNome() {
+        return super.getNome();
+    }
+
+    @Override
+    public void setNome(String nome) {
+        super.setNome(nome);
+    }
+
+    /*toString ex*/
+    @Override
+    public String toString(){
+        return "Ator: "+this.getNome() +", formação"+this.formacao;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if(!(obj instanceof Ator)){
+            return false;
+        }
+
+        Ator other = (Ator) obj;
+        return this.getNome().equals(other.getNome()) && this.formacao.equals(other.formacao);
+    }
+
 }
