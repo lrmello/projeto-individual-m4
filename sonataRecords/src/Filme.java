@@ -3,9 +3,10 @@ package sonataRecords.src;
 class Filme extends Midia{
     private int duracao;
     private String tipo;
-    private Ator[] elenco = new Ator[10];
+    private Ator[] elenco;
     private String diretor;
     private String produtor;
+
 
 
     /*Construtor com parametro*/
@@ -68,6 +69,16 @@ class Filme extends Midia{
         this.produtor = produtor;
     }
 
-
+    public void exibir_filmes(){
+        System.out.println("Titulo: "+getTitulo());
+        System.out.println("Ano: "+ getAno());
+        System.out.println("Genêro: "+getGenero());
+        System.out.println("Duração: "+getDuracao()+"minutos");
+        System.out.println("Tipo: "+ getTipo());
+        System.out.println("Diretor: "+ getDiretor());
+        System.out.println("Produtor: "+getProdutor());
+        System.out.println("Elenco: ");
+        System.out.println("-" + elenco[0].getNome() + "("+ elenco[0].getFormacao()+")");
+    }
 
 }

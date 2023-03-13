@@ -36,5 +36,12 @@ class Midia {
         this.genero = genero;
     }
 
+    /*Esse metodo fará a exibição da midia como um parametro vazio*/
+    public void exibir_midia(){
+        System.out.println("Nome da midia" + getTitulo());
+        System.out.println("Ano da midia: "+ getAno());
+        System.out.println("Genero da midia: "+ getGenero());
+    }
+
 
 }

@@ -1,9 +1,13 @@
 package sonataRecords.src;
+
+import java.util.Scanner;
+
 /*A classe biblioteca aplica a composição midia como aplicação de método*/
 class Biblioteca {
     private Midia midia;
     private String[] usuarios;
     private Playlist[] playlists;
+
 
     public Biblioteca(){
         this.midia = midia;
@@ -35,19 +39,31 @@ class Biblioteca {
     }
 
 
-    /*Aqui ela irá tocar as playlists no estado atual */
-    public void tocar_playlist(String nome_playlist){
-        for (Playlist playlist : playlists){
-            if (playlist.getNome().equals(nome_playlist)){
-                String[] ordem = playlist.getOrdem();
-                for (String midiaNome : ordem){
-                    Midia midia = playlist.get_midia_atual();
-                }
 
-                return;
-            }
+    /*Aqui ela irá tocar as playlists no estado atual
+    * Um metodo pode ou não passar parametro ou não dependendo do que será passado
+    *
+    * Nesse caso, o metodo tocar_playlist irá executar uma ação para que possa tocar a música da playlist
+    *
+    *  */
+    public String tocar_playlist(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Você quer que inicie a sua playlist?");
+
+        String retorno = input.nextLine();
+
+        if (retorno.equalsIgnoreCase("Sim")){
+            System.out.println("Iniciando playlist");
+        }else if(retorno.equalsIgnoreCase("Não")){
+            System.out.println("Encerrando playlist");
+            tocar_playlist();
+        }else{
+            System.out.println("Não entendi o que você escreveu");
         }
-        System.out.println("Playlist não encontrada");
+        
+        return playlists.toString();
+
     }
 
 
