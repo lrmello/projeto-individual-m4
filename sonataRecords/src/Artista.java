@@ -6,11 +6,6 @@ class Artista {
     private String premiacoes;
     private String genero;
 
-    /*O metodo construtor ele possui o mesmo nome da classe e não informa retorno*/
-    public Artista(String nome){
-        System.out.println("Criando um novo artista");/*Inserindo um novo artista*/
-    }
-
 
     public Artista(String nome,String dataNascimento,String premiacoes,String genero){
         this.nome = nome;

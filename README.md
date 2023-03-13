@@ -1,5 +1,6 @@
 <center>##projeto-individual-m4</center>
-Projeto para desenvolvimento em Java para o bootcamp Resilia
+<br>
+<center>Projeto para desenvolvimento em Java para o bootcamp Resilia</center>
 
 ***Nome do projeto: Sonata Records***
 
@@ -23,7 +24,6 @@ Ator.java(Herdada pela classe Artista)
 Musico.java(Herdada da classe Artista)
 Filme.java(Herdada da classe Midia)
 Musica(Herdada da classe Midia)
-
 ```
 
 Exemplo de inserção de um novo Artista a partir de uma instância:
@@ -62,6 +62,43 @@ Houve herança de uma classe, tendo uma classe pai e filha:
 class Musica extends Midia
 
 ```
+
+É utilizado vários metódos para passar uma nova mídia, porém elas não terão paramêtros para o usuário
+````java
+
+  /* Para iteração com o usuário para a playlist */
+
+  public String iteracao_playlist()
+
+  /* Para seguir para a próxima midia */
+
+  public void proxima_midia()
+
+  /* Para seguir para a mídia anterior */
+
+  public void midia_anterior() 
+
+  /* Para misturar as mídias pela posição atual*/
+
+  public void misturar_midias()
+
+````
+Para instanciar a playlist, criando uma playlist:
+
+````java
+
+       Playlist playlist;
+        playlist = new Playlist("Nova playlist",
+                midias,
+                new String[]{"Musica nova"},
+                1);
+
+````
+Para iniciar a playlist:
+
+````java
+biblioteca.tocar_playlist();
+````
 
 Linguagem feita:
 

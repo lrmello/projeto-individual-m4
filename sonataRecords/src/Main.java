@@ -8,38 +8,33 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Ator artista1 = new Ator("Leonardo", "Cinema");
+        Ator[] elenco = new Ator[5];
+        elenco[0] = new Ator("Jubileu","280519","3 Oscar","Masculino","Cinema");
 
-        Ator ator1 = new Ator("Jubileu","Cinema");
 
+        Artista novoMusico1 = new Musico("Leonardo","280895","Grammy","Masculino","Rock");
 
         /*Inserindo novas midias a partir de um array montando uma playlist*/
-        Midia[] midias = {
-                new Musica(120, 5,
-                new Artista("nome", "280519", "Oscar", "Masculino"), "Funk", 2023, "Funk")};
+        Midia[] midias = new Midia[2];
+        /*Instanciando uma classe midia para adicionar uma musica */
+        midias[0] = new Musica("Musica",2023,"Rock",novoMusico1);
 
+        /*Instanciando uma nova playlist, criando uma nova*/
+        Playlist playlist;
+        playlist = new Playlist("Nova playlist",
+                midias,
+                new String[]{"Musica nova"},
+                1);
+        String[] ordemAtual = playlist.getOrdem();
 
-        Playlist playlist = new Playlist("Playlist", midias);
+        playlist.iteracao_playlist();
 
-        System.out.println("Nome da Playlist: " + playlist.getNome());
-        System.out.println("Midias na playList: ");
-        for (int j = 0; j < midias.length; j++) {
-            System.out.println((j + 1) + "." + playlist.get_midia_atual().getTitulo());
-            playlist.proxima_midia();
-        }
+        Biblioteca biblioteca = new Biblioteca();
 
-        Filme filme1 = new Filme(120,"Longa",new String[]{"João"},"Zé timba","Cachorro Extends","A busca pelo pica-pau",2023,"Drama");
-        System.out.println("Titulo: "+filme1.getTitulo());
-        System.out.println("Ano: "+filme1.getAno());
-        System.out.println("Genêro: "+filme1.getGenero());
-        System.out.println("Duração: "+filme1.getDuracao()+"minutos");
-        System.out.println("Tipo: "+filme1.getTipo());
-        System.out.println("Diretor: "+filme1.getDiretor());
-        System.out.println("Produtor: "+filme1.getProdutor());
-        System.out.println("Elenco: ");
-        for (Ator ator: filme1.getElenco()){
-            System.out.println("-" + ator.getNome() + "("+ ator.getFormacao() +")");
-        }
+        biblioteca.tocar_playlist();
+
+        Filme filme1 = new Filme(120,"Longa",elenco,"Zé timba","Cachorro Extends","A busca pelo pica-pau",2023,"Drama");
+        filme1.exibir_filmes();
      }
 
-    }
+}

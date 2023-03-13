@@ -8,13 +8,10 @@ class Musica extends Midia {
     /*artista é componente de classe Artista*/
     private Artista artistaComposto;
 
-    public Musica(double duracao, int notaMusica, Artista artistaComposto,String titulo,int ano,String genero){
-        super(titulo,ano,genero);
+    public Musica(String titulo, int ano, String genero, Artista artistaComposto) {
+        super(titulo, ano, genero);
         this.artistaComposto = artistaComposto;
-        this.duracao = duracao;
-        this.notaMusica= notaMusica;
     }
-
 
     /*Os getters e setters getDuracao e setDuracao estão sendo encapulsadas sendo manipuladas de forma indireta */
     public double getDuracao(){
@@ -35,6 +32,24 @@ class Musica extends Midia {
         }else{
             System.out.println("Nota inválida! Insira uma nota de 1 a 5");
         }
+    }
+
+    public Artista getArtistaComposto() {
+        return artistaComposto;
+    }
+
+    public void setArtistaComposto(Artista artistaComposto) {
+        this.artistaComposto = artistaComposto;
+    }
+
+
+
+    public void exibir_musica(){
+        System.out.println("Nome do artista: "+ getArtistaComposto());
+        System.out.println("Nome da musica: "+ getTitulo());
+        System.out.println("Duração da musica: " + getDuracao());
+        System.out.println("Nota da música: "+ getNotaMusica());
+
     }
 
 }
